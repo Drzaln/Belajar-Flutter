@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'UNNES App',
+      title: 'ILKOM App',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.green,
       ),
-      home: MyHomePage(title: 'UNNES Mobile'),
+      home: MyHomePage(title: 'ILKOM Mobile'),
     );
   }
 }
@@ -288,11 +288,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 fontSize: 17.0,
                 fontWeight: FontWeight.bold),
           ),
-          new Card(
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              children: <Widget>[],
-            ),
+          Column(
+            children: <Widget>[
+              Card(
+                child: Text('TES'),
+              ),
+            ],
           ),
         ],
       ),
@@ -338,13 +339,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 icon: Icon(CommunityMaterialIcons.view_dashboard_outline, color: Colors.green),
                 title: Text('Dashboard')),
             BottomNavigationBarItem(
-                icon: Icon(CommunityMaterialIcons.book_open_variant, color: Colors.green),
+                icon: Icon(CommunityMaterialIcons.book_open_page_variant, color: Colors.green),
                 title: Text('Akademik')),
             BottomNavigationBarItem(
                 icon: Icon(MyFlutterApp.course, color: Colors.green,),
                 title: Text('Jadwal')),
             BottomNavigationBarItem(
-                icon: Icon(CommunityMaterialIcons.account_box, color: Colors.green),
+                icon: Icon(MyFlutterApp.graduation_hat, color: Colors.green),
                 title: Text('Profile'))
           ],
           onTap: (index) {
