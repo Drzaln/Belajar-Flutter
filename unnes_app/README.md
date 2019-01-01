@@ -1,6 +1,6 @@
 # unnes_app
 
-All in one UNNES app
+Try to make app with Flutter
 
 ## Getting Started
 
