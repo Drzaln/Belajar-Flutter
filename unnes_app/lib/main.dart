@@ -3,6 +3,7 @@ import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/widgets.dart';
 import 'package:unnes_app/customFont.dart';
 import 'package:unnes_app/dashboard.dart';
+import 'package:unnes_app/akademik.dart';
 
 void main() => runApp(MyApp());
 
@@ -36,36 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
     new dashboard(),
 
     // AKADEMIK
-    Container(
-      padding: EdgeInsets.all(10.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        mainAxisSize: MainAxisSize.max,
-        children: <Widget>[
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Text(
-                'AKADEMIK',
-                style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: 17.0,
-                    fontWeight: FontWeight.bold),
-              ),
-              Text(
-                'Semester Genap 2018/2019',
-                style: TextStyle(fontSize: 12.0),
-              ),
-              Container(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                ),
-              ),
-            ],
-          ),
-        ],
-      ),
-    ),
+    new akademik(),
 
     // JADWAL
     new Container(
