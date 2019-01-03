@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/widgets.dart';
+import 'package:community_material_icon/community_material_icon.dart';
 import 'package:unnes_app/customFont.dart';
 import 'package:unnes_app/dashboard.dart';
 import 'package:unnes_app/akademik.dart';
+import 'package:unnes_app/jadwal.dart';
 
 void main() => runApp(MyApp());
 
@@ -40,20 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
     new akademik(),
 
     // JADWAL
-    new Container(
-      padding: EdgeInsets.all(10.0),
-      child: new Column(
-        children: <Widget>[
-          new Text(
-            ' JADWAL',
-            style: TextStyle(
-                color: Colors.grey,
-                fontSize: 17.0,
-                fontWeight: FontWeight.bold),
-          ),
-        ],
-      ),
-    ),
+    new jadwal(),
 
     // PROFIL
     Text('Profile'),
@@ -69,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return new Scaffold(
         backgroundColor: Colors.white,
-        appBar: new AppBar(
+        appBar: new AppBar( // bisa pakai image
           backgroundColor: Colors.transparent,
           elevation: 0.0,
           leading: Image.asset('assets/images/logo.png'),
