@@ -9,7 +9,7 @@ class dashboard extends StatelessWidget {
     // TODO: implement build
     return // DASHBOARD
         new Container(
-      padding: EdgeInsets.all(16.0),
+      padding: EdgeInsets.all(10.0),
       child: new Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
