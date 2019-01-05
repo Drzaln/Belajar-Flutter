@@ -5,10 +5,9 @@ class akademik extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return new Container(
-      padding: EdgeInsets.all(10.0),
+      padding: EdgeInsets.all(16.0),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        mainAxisSize: MainAxisSize.max,
+        mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -9,7 +9,7 @@ class dashboard extends StatelessWidget {
     // TODO: implement build
     return // DASHBOARD
         new Container(
-      padding: EdgeInsets.all(10.0),
+      padding: EdgeInsets.all(16.0),
       child: new Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -42,10 +42,12 @@ class dashboard extends StatelessWidget {
                   ],
                 ),
                 new cardMatkul(
+                  jam: '10.00',
                   matkul: 'Dasar-dasar flutter',
                   ruang: 'Lab-ILKOM',
                 ),
                 new cardMatkul(
+                  jam: '13.00',
                   matkul: 'Parsing flutter',
                   ruang: 'Lab-JARKOM',
                 ),

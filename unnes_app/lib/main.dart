@@ -57,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return new Scaffold(
         backgroundColor: Colors.white,
-        appBar: new AppBar( // bisa pakai image
+        appBar: AppBar( // bisa pakai image
           backgroundColor: Colors.transparent,
           elevation: 0.0,
           leading: Image.asset('assets/images/logo.png'),

@@ -14,12 +14,12 @@ class paddingJadwal extends StatelessWidget{
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            hari,
+            'Jadwal kuliah hari ini:',
             style: TextStyle(fontSize: 12, color: Colors.grey),
             textAlign: TextAlign.left,
           ),
           Text(
-            'Jadwal kuliah hari ini:',
+            hari,
             style: TextStyle(color: Colors.black, fontSize: 15),
           ),
         ],

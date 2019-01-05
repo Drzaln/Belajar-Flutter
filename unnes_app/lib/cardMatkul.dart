@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 class cardMatkul extends StatelessWidget{
-  cardMatkul({this.matkul, this.ruang});
+  cardMatkul({this.matkul, this.ruang, this.jam});
 
   final String matkul;
   final String ruang;
+  final String jam;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class cardMatkul extends StatelessWidget{
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.all(16.0),
-            child: Icon(Icons.view_list,color: Colors.green),
+            child: Text(jam),
           ),
           Padding(
             padding: const EdgeInsets.all(16.0),
