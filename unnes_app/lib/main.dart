@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:unnes_app/viewtab.dart';
 import 'package:unnes_app/navtab.dart';
+import 'package:flutter/foundation.dart'
+    show debugDefaultTargetPlatformOverride;
 
-void main() => runApp(MyApp());
+void main() { 
+  debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
+  runApp(MyApp());}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -15,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: MyHomePage(title: 'ILKOM Mobile'),
+      home: MyHomePage(title: 'MyIlkom'),
     );
   }
 }
@@ -34,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return new DefaultTabController(
       length: 4,
       child: new Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.grey[200],
         appBar: AppBar(
           // bisa pakai image
           backgroundColor: Colors.transparent,
