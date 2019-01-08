@@ -31,6 +31,7 @@ class cardNama extends StatelessWidget{
                     Text(
                       namaUser,
                       style: TextStyle(color: Colors.black, fontSize: 15),
+                      softWrap: true,
                     ),
                   ],
                 ),

@@ -8,7 +8,7 @@ class akademik extends StatelessWidget {
       padding: EdgeInsets.all(10.0),
       child: Column(
         mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
             'AKADEMIK',
@@ -16,7 +16,9 @@ class akademik extends StatelessWidget {
                 color: Colors.grey,
                 fontSize: 17.0,
                 fontWeight: FontWeight.bold),
-            textAlign: TextAlign.left,
+          ),
+          new semesterJalan(
+            semester: 'Semester Genap 2018/2019',
           ),
           Expanded(
             child: GridView.count(
@@ -24,10 +26,24 @@ class akademik extends StatelessWidget {
               crossAxisSpacing: 10.0,
               mainAxisSpacing: 10.0,
               children: <Widget>[
-                Text('1'),
-                Text('2'),
-                Text('3'),
-                Text('4'),
+                Card(
+                  child: Center(child: Text('1')),
+                ),
+                Card(
+                  child: Center(child: Text('2')),
+                ),
+                Card(
+                  child: Center(child: Text('3')),
+                ),
+                Card(
+                  child: Center(child: Text('4')),
+                ),
+                Card(
+                  child: Center(child: Text('5')),
+                ),
+                Card(
+                  child: Center(child: Text('6')),
+                ),
               ],
             ),
           ),

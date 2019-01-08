@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: MyHomePage(title: 'MyIlkom'),
+      home: MyHomePage(title: 'MyUnnes'),
     );
   }
 }
@@ -47,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
           titleSpacing: 0.0,
           title: new Text(
             widget.title,
-            style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold),
+            style: TextStyle(color: Colors.blue[900], fontWeight: FontWeight.bold),
           ),
         ),
         body: ViewTab(),
