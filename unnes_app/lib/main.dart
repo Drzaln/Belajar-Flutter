@@ -38,12 +38,12 @@ class _MyHomePageState extends State<MyHomePage> {
     return new DefaultTabController(
       length: 4,
       child: new Scaffold(
-        backgroundColor: Colors.grey[200],
+        backgroundColor: Colors.grey[100],
         appBar: AppBar(
           // bisa pakai image
           backgroundColor: Colors.transparent,
           elevation: 0.0,
-          leading: Image.asset('assets/images/logo.png'),
+          leading: Image.asset('assets/images/logo.png',),
           titleSpacing: 0.0,
           title: new Text(
             widget.title,

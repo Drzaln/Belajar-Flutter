@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class jadwal extends StatelessWidget {
+class profil extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Container(
@@ -10,7 +10,7 @@ class jadwal extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            'JADWAL',
+            'PROFILE',
             style: TextStyle(
                 color: Colors.grey,
                 fontSize: 17.0,
