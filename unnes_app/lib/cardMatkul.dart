@@ -16,23 +16,29 @@ class cardMatkul extends StatelessWidget{
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.all(10.0),
-            child: Text(jam),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(10.0),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text(
-                  matkul,
-                  style: TextStyle(fontSize: 15, color: Colors.black),
-                  textAlign: TextAlign.left,
-                ),
-                Text(
-                  ruang,
-                  style: TextStyle(color: Colors.grey, fontSize: 12),
-                ),
+                Text(jam),
               ],
+            ),
+          ),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(
+                    matkul,
+                    style: TextStyle(fontSize: 15, color: Colors.black),
+                    textAlign: TextAlign.left,
+                  ),
+                  Text(
+                    ruang,
+                    style: TextStyle(color: Colors.grey, fontSize: 12),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
