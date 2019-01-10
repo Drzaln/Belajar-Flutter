@@ -16,23 +16,57 @@ class Profil extends StatelessWidget {
                 fontSize: 17.0,
                 fontWeight: FontWeight.bold),
           ),
-          Container(
-            child: Stack(
-              alignment: Alignment.center,
-              children: <Widget>[
-                Card(
-                  child: Container(
+          Expanded(
+            child: Container(
+              padding: EdgeInsets.only(top: 10.0),
+              width: double.infinity,
+              // color: Colors.yellow,
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  Container(
+                    height: 300.0,
                     width: double.infinity,
-                    height: 50.0,
-                    padding: EdgeInsets.all(16.0),
-                    child: Text('1'),
+                    // color: Colors.red,
+                    child: Card(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Padding(
+                            padding: EdgeInsets.only(top: 16.0),
+                            child: Column(
+                              children: <Widget>[
+                                Text(
+                                  'Doddy Rizal Novianto',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text('drzaln@students.unnes.ac.id'),
+                                Text(
+                                  '4611417023',
+                                  style: TextStyle(fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
-                ),
-                Positioned(
-                  top: 0.0,
-                  child: Card(),
-                ),
-              ],
+                  Positioned(
+                    top: 0.0,
+                    child: CircleAvatar(
+                      backgroundColor: Colors.white,
+                      backgroundImage:
+                          NetworkImage('https://avatars.io/instagram/drzaln'),
+                      radius: 80.0,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
