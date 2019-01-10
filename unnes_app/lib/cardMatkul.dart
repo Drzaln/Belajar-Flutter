@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class cardMatkul extends StatelessWidget{
-  cardMatkul({this.matkul, this.ruang, this.jam});
+class CardMatkul extends StatelessWidget{
+  CardMatkul({this.matkul, this.ruang, this.jam});
 
   final String matkul;
   final String ruang;
@@ -9,7 +9,6 @@ class cardMatkul extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Padding(
       padding: const EdgeInsets.only(left: 16.0, right: 16.0),
       child: new Row(

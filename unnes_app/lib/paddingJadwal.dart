@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
-class paddingJadwal extends StatelessWidget{
-  paddingJadwal({this.hari});
+class PaddingJadwal extends StatelessWidget{
+  PaddingJadwal({this.hari});
 
   final String hari;
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return new Padding(
       padding: const EdgeInsets.all(16.0),
       child: Column(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class akademik extends StatelessWidget {
+class AkademikTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Container(
@@ -16,7 +16,7 @@ class akademik extends StatelessWidget {
                 fontSize: 17.0,
                 fontWeight: FontWeight.bold),
           ),
-          new semesterJalan(
+          new SemesterJalan(
             semester: 'Semester Genap 2018/2019',
           ),
           Expanded(
@@ -26,27 +26,27 @@ class akademik extends StatelessWidget {
               crossAxisSpacing: 10.0,
               mainAxisSpacing: 10.0,
               children: <Widget>[
-                akademikCard(
+                AkademikCard(
                   ikon: Icons.score,
                   teks: 'Transkrip Nilai',
                 ),
-                akademikCard(
+                AkademikCard(
                   ikon: Icons.featured_play_list,
                   teks: 'Kehadiran',
                 ),
-                akademikCard(
+                AkademikCard(
                   ikon: Icons.score,
                   teks: 'Riwayat IP',
                 ),
-                akademikCard(
+                AkademikCard(
                   ikon: Icons.score,
                   teks: 'Riwayat IP',
                 ),
-                akademikCard(
+                AkademikCard(
                   ikon: Icons.score,
                   teks: 'Riwayat IP',
                 ),
-                akademikCard(
+                AkademikCard(
                   ikon: Icons.score,
                   teks: 'Riwayat IP',
                 ),
@@ -59,8 +59,8 @@ class akademik extends StatelessWidget {
   }
 }
 
-class semesterJalan extends StatelessWidget {
-  semesterJalan({this.semester});
+class SemesterJalan extends StatelessWidget {
+  SemesterJalan({this.semester});
 
   final String semester;
 
@@ -73,8 +73,8 @@ class semesterJalan extends StatelessWidget {
   }
 }
 
-class akademikCard extends StatelessWidget {
-  akademikCard({this.ikon, this.teks});
+class AkademikCard extends StatelessWidget {
+  AkademikCard({this.ikon, this.teks});
 
   final String teks;
   final ikon;

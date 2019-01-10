@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class profil extends StatelessWidget {
+class Profil extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Container(
@@ -15,6 +15,25 @@ class profil extends StatelessWidget {
                 color: Colors.grey,
                 fontSize: 17.0,
                 fontWeight: FontWeight.bold),
+          ),
+          Container(
+            child: Stack(
+              alignment: Alignment.center,
+              children: <Widget>[
+                Card(
+                  child: Container(
+                    width: double.infinity,
+                    height: 50.0,
+                    padding: EdgeInsets.all(16.0),
+                    child: Text('1'),
+                  ),
+                ),
+                Positioned(
+                  top: 0.0,
+                  child: Card(),
+                ),
+              ],
+            ),
           ),
         ],
       ),

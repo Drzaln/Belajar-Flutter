@@ -3,10 +3,9 @@ import 'package:unnes_app/cardMatkul.dart';
 import 'package:unnes_app/paddingJadwal.dart';
 import 'package:unnes_app/cardNama.dart';
 
-class dashboard extends StatelessWidget {
+class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return // DASHBOARD
         new Container(
       padding: EdgeInsets.all(10.0),
@@ -20,7 +19,7 @@ class dashboard extends StatelessWidget {
                 fontSize: 17.0,
                 fontWeight: FontWeight.bold),
           ),
-          new cardNama(
+          new CardNama(
             namaUser: 'Doddy Rizal Novianto (4611417023)',
           ),
           new Card(
@@ -36,17 +35,17 @@ class dashboard extends StatelessWidget {
                         color: Colors.grey,
                       ),
                     ),
-                    new paddingJadwal(
+                    new PaddingJadwal(
                       hari: 'Kamis, 03 Jan 2019',
                     ),
                   ],
                 ),
-                new cardMatkul(
+                new CardMatkul(
                   jam: '10.00',
                   matkul: 'Dasar-dasar flutter',
                   ruang: 'Lab-ILKOM',
                 ),
-                new cardMatkul(
+                new CardMatkul(
                   jam: '13.00',
                   matkul: 'Parsing flutter',
                   ruang: 'Lab-JARKOM',

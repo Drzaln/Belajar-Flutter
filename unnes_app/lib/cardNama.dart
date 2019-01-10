@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
-class cardNama extends StatelessWidget {
-  cardNama({this.namaUser});
+class CardNama extends StatelessWidget {
+  CardNama({this.namaUser});
 
   final String namaUser;
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return new Card(
       child: Column(
         mainAxisSize: MainAxisSize.min,

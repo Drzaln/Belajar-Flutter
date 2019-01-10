@@ -5,7 +5,6 @@ import 'package:unnes_app/customFont.dart';
 class NavTab extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return new TabBar(
       tabs: <Widget>[
         Tab(

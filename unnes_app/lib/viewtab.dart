@@ -7,13 +7,12 @@ import 'package:unnes_app/profil.dart';
 class ViewTab extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return TabBarView(
       children: <Widget>[
-        new dashboard(),
-        new akademik(),
-        new jadwal(),
-        new profil(),
+        new Dashboard(),
+        new AkademikTab(),
+        new Jadwal(),
+        new Profil(),
       ],
     );
   }

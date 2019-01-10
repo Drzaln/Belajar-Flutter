@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class jadwal extends StatelessWidget {
+class Jadwal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Container(
