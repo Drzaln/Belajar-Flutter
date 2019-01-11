@@ -49,6 +49,24 @@ class Profil extends StatelessWidget {
                                   '4611417023',
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
+                                Container(
+                                  child: RaisedButton(
+                                    color: Colors.orange,
+                                    padding: EdgeInsets.only(
+                                      top: 8.0,
+                                      bottom: 8.0,
+                                      right: 16.0,
+                                      left: 16.0,
+                                    ),
+                                    onPressed: () => {},
+                                    highlightColor: Colors.orange,
+                                    splashColor: Colors.yellow,
+                                    child: Text(
+                                      'Lihat KTM',
+                                      style: TextStyle(color: Colors.white),
+                                    ),
+                                  ),
+                                ),
                               ],
                             ),
                           ),

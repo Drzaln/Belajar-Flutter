@@ -20,37 +20,40 @@ class AkademikTab extends StatelessWidget {
             semester: 'Semester Genap 2018/2019',
           ),
           Expanded(
-            child: GridView.count(
-              physics: BouncingScrollPhysics(),
-              crossAxisCount: 2,
-              crossAxisSpacing: 10.0,
-              mainAxisSpacing: 10.0,
-              children: <Widget>[
-                AkademikCard(
-                  ikon: Icons.score,
-                  teks: 'Transkrip Nilai',
-                ),
-                AkademikCard(
-                  ikon: Icons.featured_play_list,
-                  teks: 'Kehadiran',
-                ),
-                AkademikCard(
-                  ikon: Icons.score,
-                  teks: 'Riwayat IP',
-                ),
-                AkademikCard(
-                  ikon: Icons.score,
-                  teks: 'Riwayat IP',
-                ),
-                AkademikCard(
-                  ikon: Icons.score,
-                  teks: 'Riwayat IP',
-                ),
-                AkademikCard(
-                  ikon: Icons.score,
-                  teks: 'Riwayat IP',
-                ),
-              ],
+            child: Padding(
+              padding: const EdgeInsets.only(top: 8.0),
+              child: GridView.count(
+                physics: BouncingScrollPhysics(),
+                crossAxisCount: 2,
+                crossAxisSpacing: 10.0,
+                mainAxisSpacing: 10.0,
+                children: <Widget>[
+                  AkademikCard(
+                    ikon: Icons.score,
+                    teks: 'Transkrip Nilai',
+                  ),
+                  AkademikCard(
+                    ikon: Icons.featured_play_list,
+                    teks: 'Kehadiran',
+                  ),
+                  AkademikCard(
+                    ikon: Icons.score,
+                    teks: 'Riwayat IP',
+                  ),
+                  AkademikCard(
+                    ikon: Icons.score,
+                    teks: 'Riwayat IP',
+                  ),
+                  AkademikCard(
+                    ikon: Icons.score,
+                    teks: 'Riwayat IP',
+                  ),
+                  AkademikCard(
+                    ikon: Icons.score,
+                    teks: 'Riwayat IP',
+                  ),
+                ],
+              ),
             ),
           ),
         ],
@@ -81,29 +84,28 @@ class AkademikCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Card(
-      child: FlatButton(
-        onPressed: () => {},
-        highlightColor: Colors.orange,
-        splashColor: Colors.yellow,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Icon(
-              ikon,
-              color: Colors.blue[900],
-              size: 70.0,
+    return new RaisedButton(
+      color: Colors.white,
+      onPressed: () => {},
+      highlightColor: Colors.orange,
+      splashColor: Colors.yellow,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Icon(
+            ikon,
+            color: Colors.blue[900],
+            size: 70.0,
+          ),
+          Center(
+            child: Text(
+              teks,
+              softWrap: true,
+              textAlign: TextAlign.center,
             ),
-            Center(
-              child: Text(
-                teks,
-                softWrap: true,
-                textAlign: TextAlign.center,
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
