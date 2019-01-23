@@ -4,10 +4,16 @@ class CardNama extends StatelessWidget {
   CardNama({this.namaUser});
 
   final String namaUser;
+  var roundPojok = 15.0;
 
   @override
   Widget build(BuildContext context) {
     return new Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadiusDirectional.all(
+          Radius.circular(roundPojok),
+        ),
+      ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[

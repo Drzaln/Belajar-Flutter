@@ -16,6 +16,15 @@ class Jadwal extends StatelessWidget {
                 fontSize: 17.0,
                 fontWeight: FontWeight.bold),
           ),
+          new Container(
+            child: Expanded(
+              child: ListView(
+                children: <Widget>[
+                  Text('1'),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );

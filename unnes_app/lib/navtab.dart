@@ -24,7 +24,7 @@ class NavTab extends StatelessWidget{
       unselectedLabelColor: Colors.grey,
       indicatorSize: TabBarIndicatorSize.label,
       indicatorPadding: EdgeInsets.all(5.0),
-      indicatorColor: Colors.orange,
+      indicatorColor: Colors.transparent,
     );
   }
 }

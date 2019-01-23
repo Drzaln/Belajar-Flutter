@@ -5,9 +5,10 @@ import 'package:unnes_app/navtab.dart';
 import 'package:flutter/foundation.dart'
     show debugDefaultTargetPlatformOverride;
 
-void main() { 
+void main() {
   debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
-  runApp(MyApp());}
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -43,11 +44,14 @@ class _MyHomePageState extends State<MyHomePage> {
           // bisa pakai image
           backgroundColor: Colors.transparent,
           elevation: 0.0,
-          leading: Image.asset('assets/images/logo.png',),
+          leading: Image.asset(
+            'assets/images/logo.png',
+          ),
           titleSpacing: 0.0,
           title: new Text(
             widget.title,
-            style: TextStyle(color: Colors.blue[900], fontWeight: FontWeight.bold),
+            style:
+                TextStyle(color: Colors.blue[900], fontWeight: FontWeight.bold),
           ),
         ),
         body: ViewTab(),

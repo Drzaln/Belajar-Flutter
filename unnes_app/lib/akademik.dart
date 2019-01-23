@@ -81,10 +81,16 @@ class AkademikCard extends StatelessWidget {
 
   final String teks;
   final ikon;
+  var roundPojok = 15.0;
 
   @override
   Widget build(BuildContext context) {
     return new RaisedButton(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadiusDirectional.all(
+          Radius.circular(roundPojok),
+        ),
+      ),
       color: Colors.white,
       onPressed: () => {},
       highlightColor: Colors.orange,
