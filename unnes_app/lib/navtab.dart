@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:community_material_icon/community_material_icon.dart';
-import 'package:unnes_app/customFont.dart';
+import 'package:MyUnnes/customFont.dart';
 
 class NavTab extends StatelessWidget{
   @override

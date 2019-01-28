@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class Profil extends StatelessWidget {
   Profil({this.namaUser, this.email, this.nim});
@@ -97,7 +98,7 @@ class Profil extends StatelessWidget {
                     child: CircleAvatar(
                       backgroundColor: Colors.white,
                       backgroundImage:
-                          NetworkImage('https://avatars.io/instagram/drzaln'),
+                          CachedNetworkImageProvider('https://avatars.io/instagram/drzaln'),
                       radius: avatarSize,
                     ),
                   ),
@@ -107,6 +108,7 @@ class Profil extends StatelessWidget {
           ),
           Expanded(
             child: ListView.builder(
+              physics: BouncingScrollPhysics(),
               itemBuilder: (BuildContext context, int index) =>
                   new EntryItem(data[index]),
               itemCount: data.length,

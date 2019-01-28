@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:unnes_app/viewtab.dart';
-import 'package:unnes_app/navtab.dart';
+import 'package:MyUnnes/viewtab.dart';
+import 'package:MyUnnes/navtab.dart';
 import 'package:flutter/foundation.dart'
     show debugDefaultTargetPlatformOverride;
 
@@ -41,17 +41,25 @@ class _MyHomePageState extends State<MyHomePage> {
       child: new Scaffold(
         backgroundColor: Colors.grey[100],
         appBar: AppBar(
-          // bisa pakai image
+          // bisa pakai image,
           backgroundColor: Colors.transparent,
           elevation: 0.0,
-          leading: Image.asset(
-            'assets/images/logo.png',
-          ),
           titleSpacing: 0.0,
-          title: new Text(
-            widget.title,
-            style:
-                TextStyle(color: Colors.blue[900], fontWeight: FontWeight.bold),
+          title: Padding(
+            padding: const EdgeInsets.only(left: 16.0),
+            child: Row(
+              children: <Widget>[
+                Image.asset('assets/images/logo.png'),
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0),
+                  child: Text(
+                    widget.title,
+                    style:
+                        TextStyle(color: Colors.yellow[600], fontFamily: 'midtown',fontSize: 40),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
         body: ViewTab(),
