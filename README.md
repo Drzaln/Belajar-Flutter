@@ -3,3 +3,5 @@ Untuk mengoprek repo ini, pastikan kalian sudah menginstall Flutter, untuk cara 
 Jika *environtment* sudah siap, maka kalian bisa memulai mengoprek repo ini sesuka hati, mau dengan cara *clone*, *fork*, atau langsung *download*. Jangan lupa untuk menjalankan perintah `$ flutter packages get` didalam direktori projek.
 
 # Selamat Ngoprek!!!
+
+[![ko-fi](https://www.ko-fi.com/img/donate_sm.png)](https://ko-fi.com/O4O3PJV1)
