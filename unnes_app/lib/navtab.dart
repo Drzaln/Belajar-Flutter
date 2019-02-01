@@ -20,7 +20,7 @@ class NavTab extends StatelessWidget{
           icon: Icon(MyFlutterApp.graduation_hat),
         ),
       ],
-      labelColor: Colors.orange,
+      labelColor: Colors.yellow[700],
       unselectedLabelColor: Colors.grey,
       indicatorSize: TabBarIndicatorSize.label,
       indicatorPadding: EdgeInsets.all(5.0),

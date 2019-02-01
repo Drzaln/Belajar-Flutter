@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:MyUnnes/viewtab.dart';
 import 'package:MyUnnes/navtab.dart';
 import 'package:flutter/foundation.dart'
+
     show debugDefaultTargetPlatformOverride;
 
 void main() {
@@ -48,6 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Padding(
             padding: const EdgeInsets.only(left: 16.0),
             child: Row(
+              mainAxisSize: MainAxisSize.max,
               children: <Widget>[
                 Image.asset('assets/images/logo.png'),
                 Padding(
@@ -55,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Text(
                     widget.title,
                     style:
-                        TextStyle(color: Colors.yellow[600], fontFamily: 'midtown',fontSize: 40),
+                        TextStyle(color: Colors.yellow[700], fontFamily: 'midtown',fontSize: 40),
                   ),
                 ),
               ],

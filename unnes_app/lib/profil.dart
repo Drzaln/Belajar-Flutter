@@ -12,6 +12,22 @@ class Profil extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width,height,gambar,iseng;
+    MediaQueryData queryData;
+    queryData = MediaQuery.of(context);
+    if (MediaQuery.of(context).orientation == Orientation.landscape){
+      width = MediaQuery.of(context).size.width * 0.25;
+      height = MediaQuery.of(context).size.height * 0.25;
+      iseng = MediaQuery.of(context).size.height * 0.15;
+      gambar = MediaQuery.of(context).size.width * 0.13;
+    }
+    else{
+      width = MediaQuery.of(context).size.width * 0.10;
+      height = MediaQuery.of(context).size.height * 0.10;
+      iseng = MediaQuery.of(context).size.height * 0.25;
+      gambar = MediaQuery.of(context).size.width * 0.13;
+    }
+
     return new Container(
       padding: EdgeInsets.all(10.0),
       child: Column(
@@ -27,16 +43,18 @@ class Profil extends StatelessWidget {
           ),
           Expanded(
             child: Container(
-              padding: EdgeInsets.only(top: 10.0),
+              padding: EdgeInsets.only(top: 8.0),
               width: double.infinity,
-              // color: Colors.yellow,
+              color: Colors.yellow,
               child: Stack(
+                fit: StackFit.loose,
+                overflow: Overflow.visible,
                 alignment: Alignment.center,
                 children: [
                   Container(
-                    height: 300.0,
+                    height: iseng,
                     width: double.infinity,
-                    // color: Colors.red,
+                    color: Colors.red,
                     child: Card(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadiusDirectional.all(
@@ -47,7 +65,7 @@ class Profil extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Padding(
-                            padding: EdgeInsets.only(top: 64.0),
+                            padding: EdgeInsets.only(top: height),
                             child: Column(
                               children: <Widget>[
                                 Text(
@@ -78,7 +96,7 @@ class Profil extends StatelessWidget {
                                       left: 64.0,
                                     ),
                                     onPressed: () => {},
-                                    highlightColor: Colors.orange,
+                                    highlightColor: Colors.yellow[700],
                                     splashColor: Colors.yellow,
                                     child: Text(
                                       'Lihat KTM',
@@ -99,7 +117,7 @@ class Profil extends StatelessWidget {
                       backgroundColor: Colors.white,
                       backgroundImage:
                           CachedNetworkImageProvider('https://avatars.io/instagram/drzaln'),
-                      radius: avatarSize,
+                      radius: gambar,
                     ),
                   ),
                 ],
@@ -107,11 +125,14 @@ class Profil extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: ListView.builder(
-              physics: BouncingScrollPhysics(),
-              itemBuilder: (BuildContext context, int index) =>
-                  new EntryItem(data[index]),
-              itemCount: data.length,
+            child: Container(
+              color: Colors.green,
+              child: ListView.builder(
+                physics: BouncingScrollPhysics(),
+                itemBuilder: (BuildContext context, int index) =>
+                    new EntryItem(data[index]),
+                itemCount: data.length,
+              ),
             ),
           ),
         ],

@@ -157,6 +157,7 @@ class _InfoState extends State<Info> {
           ),
         ),
         child: ListView.builder(
+          reverse: true,
           padding: EdgeInsets.all(16.0),
           physics: BouncingScrollPhysics(),
           itemCount: dataJSON == null ? 0 : dataJSON.length,
