@@ -81,7 +81,7 @@ class AkademikCard extends StatelessWidget {
 
   final String teks;
   final ikon;
-  var roundPojok = 15.0;
+  final roundPojok = 15.0;
 
   @override
   Widget build(BuildContext context) {

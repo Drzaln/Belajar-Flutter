@@ -1,13 +1,12 @@
+import 'package:MyUnnes/src/blocs/unnesBloc.dart';
+import 'package:MyUnnes/src/models/unnesModels.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-import 'dart:async';
-import 'dart:convert';
-import 'package:MyUnnes/cardMatkul.dart';
-import 'package:MyUnnes/paddingJadwal.dart';
-import 'package:MyUnnes/cardNama.dart';
+import 'package:MyUnnes/src/ui/cardMatkul.dart';
+import 'package:MyUnnes/src/ui/paddingJadwal.dart';
+import 'package:MyUnnes/src/ui/cardNama.dart';
 
 class Dashboard extends StatelessWidget {
-  var roundPojok = 15.0;
+  final roundPojok = 15.0;
 
   @override
   Widget build(BuildContext context) {
@@ -125,26 +124,22 @@ class Dashboard extends StatelessWidget {
 }
 
 class Info extends StatefulWidget {
-  @override
-  _InfoState createState() => new _InfoState();
+  _InfoState createState() => _InfoState();
 }
 
 class _InfoState extends State<Info> {
-  List dataJSON;
   final roundPojok = 15.0;
-
-  Future<String> ambildata() async {
-    http.Response hasil =
-        await http.get('https://ilkomunnes.000webhostapp.com/api/array/info/all/doddyrn');
-
-    this.setState(() {
-      dataJSON = jsonDecode(hasil.body);
-    });
-  }
 
   @override
   void initState() {
-    this.ambildata();
+    bloc.fetchAllUnnes();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    bloc.dispose();
+    super.dispose();
   }
 
   @override
@@ -156,33 +151,42 @@ class _InfoState extends State<Info> {
             Radius.circular(roundPojok),
           ),
         ),
-        child: ListView.builder(
-          reverse: true,
-          padding: EdgeInsets.all(16.0),
-          physics: BouncingScrollPhysics(),
-          itemCount: dataJSON == null ? 0 : dataJSON.length,
-          itemBuilder: (context, i) {
-            return Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Text(
-                  dataJSON[i]['judul'],style: TextStyle(
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(top: 8.0),
-                  child: Text(dataJSON[i]['pesan']),
-                ),
-                Divider(
-                  color: Colors.grey,
-                ),
-              ],
+        child: StreamBuilder(
+          stream: bloc.allUnnes,
+          builder: (context, AsyncSnapshot<List<Unnes>> snapshot) {
+            if (snapshot.hasData) {
+              return buildList(snapshot);
+            } else if (snapshot.hasError) {
+              return Text(snapshot.error.toString());
+            }
+            return Center(
+              child: CircularProgressIndicator(),
             );
           },
         ),
       ),
+    );
+  }
+
+  Widget buildList(AsyncSnapshot<List<Unnes>> snapshot) {
+    return ListView.builder(
+      physics: BouncingScrollPhysics(),
+      itemCount: snapshot.data.length,
+      itemBuilder: (BuildContext context, int index) {
+        return ListTile(
+          title: Padding(
+            padding: const EdgeInsets.only(bottom: 5.0,top: 16.0),
+            child: Text(
+              snapshot.data[index].judul,
+              style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+            ),
+          ),
+          subtitle: Text(
+            snapshot.data[index].pesan,
+            style: TextStyle(fontSize: 12.0, color: Colors.black),
+          ),
+        );
+      },
     );
   }
 }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:MyUnnes/dashboard.dart';
-import 'package:MyUnnes/akademik.dart';
-import 'package:MyUnnes/jadwal.dart';
-import 'package:MyUnnes/profil.dart';
+import 'package:MyUnnes/src/ui/dashboard.dart';
+import 'package:MyUnnes/src/ui/akademik.dart';
+import 'package:MyUnnes/src/ui/jadwal.dart';
+import 'package:MyUnnes/src/ui/profil.dart';
 
 class ViewTab extends StatelessWidget {
   @override

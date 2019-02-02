@@ -4,7 +4,7 @@ class CardNama extends StatelessWidget {
   CardNama({this.namaUser});
 
   final String namaUser;
-  var roundPojok = 15.0;
+  final roundPojok = 15.0;
 
   @override
   Widget build(BuildContext context) {
