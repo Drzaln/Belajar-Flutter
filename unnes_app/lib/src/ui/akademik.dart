@@ -3,26 +3,32 @@ import 'package:flutter/material.dart';
 class AkademikTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new Container(
+    return Container(
+      key: ValueKey('Container'),
       padding: EdgeInsets.all(10.0),
       child: Column(
+        key: ValueKey('Column'),
         mainAxisSize: MainAxisSize.max,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
             'AKADEMIK',
+            key: ValueKey('Text'),
             style: TextStyle(
                 color: Colors.grey,
                 fontSize: 17.0,
                 fontWeight: FontWeight.bold),
           ),
-          new SemesterJalan(
+          SemesterJalan(
             semester: 'Semester Genap 2018/2019',
           ),
           Expanded(
+            key: ValueKey('Expanded'),
             child: Padding(
+              key: ValueKey('Padding'),
               padding: const EdgeInsets.only(top: 8.0),
               child: GridView.count(
+                key: ValueKey('GridView.count'),
                 physics: BouncingScrollPhysics(),
                 crossAxisCount: 2,
                 crossAxisSpacing: 10.0,
@@ -69,8 +75,9 @@ class SemesterJalan extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Text(
+    return Text(
       semester,
+      key: ValueKey('Text'),
       style: TextStyle(fontSize: 12.0),
     );
   }
@@ -85,7 +92,8 @@ class AkademikCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return RaisedButton(
+      key: ValueKey('RaisedButton'),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadiusDirectional.all(
           Radius.circular(roundPojok),
@@ -96,17 +104,21 @@ class AkademikCard extends StatelessWidget {
       highlightColor: Colors.orange,
       splashColor: Colors.yellow,
       child: Column(
+        key: ValueKey('Column'),
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Icon(
             ikon,
+            key: ValueKey('Icon'),
             color: Colors.blue[900],
             size: 70.0,
           ),
           Center(
+            key: ValueKey('Center'),
             child: Text(
               teks,
+              key: ValueKey('Text'),
               softWrap: true,
               textAlign: TextAlign.center,
             ),

@@ -6,18 +6,23 @@ class NavTab extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return new TabBar(
+      key: ValueKey('TabBar'),
       tabs: <Widget>[
         Tab(
           icon: Icon(CommunityMaterialIcons.view_dashboard),
+          key: ValueKey('Tab'),
         ),
         Tab(
           icon: Icon(CommunityMaterialIcons.book_open_page_variant),
+          key: ValueKey('Tab'),
         ),
         Tab(
           icon: Icon(MyFlutterApp.course),
+          key: ValueKey('Tab'),
         ),
         Tab(
           icon: Icon(MyFlutterApp.graduation_hat),
+          key: ValueKey('Tab'),
         ),
       ],
       labelColor: Colors.yellow[700],

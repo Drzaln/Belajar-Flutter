@@ -8,6 +8,7 @@ class ViewTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TabBarView(
+      key: ValueKey('TabBarView'),
       children: <Widget>[
         new Dashboard(),
         new AkademikTab(),

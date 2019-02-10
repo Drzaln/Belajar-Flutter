@@ -10,52 +10,60 @@ class Dashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Container(
+    return Container(
+      key: ValueKey('Container'),
       padding: EdgeInsets.all(10.0),
-      child: new Column(
+      child: Column(
+        key: ValueKey('Column'),
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          new Text(
+          Text(
             ' DASHBOARD',
+            key: ValueKey('Text'),
             style: TextStyle(
                 color: Colors.grey,
                 fontSize: 17.0,
                 fontWeight: FontWeight.bold),
           ),
-          new CardNama(
+          CardNama(
             namaUser: 'Doddy Rizal Novianto (4611417023)',
           ),
           Expanded(
+            key: ValueKey('Expanded'),
             child: Card(
+              key: ValueKey('Card'),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(
                   Radius.circular(roundPojok),
                 ),
               ),
               child: ListView(
+                key: ValueKey('ListView'),
                 physics: BouncingScrollPhysics(),
                 scrollDirection: Axis.vertical,
                 children: <Widget>[
                   Row(
+                    key: ValueKey('Row'),
                     children: <Widget>[
                       Padding(
+                        key: ValueKey('Padding'),
                         padding: const EdgeInsets.all(16.0),
                         child: Icon(
                           Icons.calendar_today,
                           color: Colors.grey,
                         ),
                       ),
-                      new PaddingJadwal(
+                      PaddingJadwal(
                         hari: 'Kamis, 03 Jan 2019',
                       ),
                     ],
                   ),
-                  new CardMatkul(
+                  CardMatkul(
                     jam: '10.00',
                     matkul: 'Dasar-dasar flutter',
                     ruang: 'Lab-ILKOM',
                   ),
-                  new CardMatkul(
+                  CardMatkul(
                     jam: '13.00',
                     matkul: 'Parsing flutter',
                     ruang: 'Lab-JARKOM',
@@ -111,6 +119,7 @@ class Dashboard extends StatelessWidget {
           ),
           Text(
             ' INFO',
+            key: ValueKey('Text'),
             style: TextStyle(
                 color: Colors.grey,
                 fontSize: 17.0,
@@ -136,22 +145,26 @@ class _InfoState extends State<Info> {
     super.initState();
   }
 
-  @override
+  /*@override
   void dispose() {
     bloc.dispose();
     super.dispose();
-  }
+  }*/
 
   @override
   Widget build(BuildContext context) {
+    
     return Expanded(
+      key: ValueKey('Expanded'),
       child: Card(
+        key: ValueKey('Card'),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(
             Radius.circular(roundPojok),
           ),
         ),
         child: StreamBuilder(
+          key: ValueKey('StreamBuilder'),
           stream: bloc.allUnnes,
           builder: (context, AsyncSnapshot<List<Unnes>> snapshot) {
             if (snapshot.hasData) {
@@ -160,7 +173,11 @@ class _InfoState extends State<Info> {
               return Text(snapshot.error.toString());
             }
             return Center(
-              child: CircularProgressIndicator(),
+              key: ValueKey('Center'),
+              child: CircularProgressIndicator(
+                key: ValueKey('CircularProgressIndicator'),
+                backgroundColor: Colors.yellow[700],
+              ),
             );
           },
         ),
@@ -170,21 +187,24 @@ class _InfoState extends State<Info> {
 
   Widget buildList(AsyncSnapshot<List<Unnes>> snapshot) {
     return ListView.builder(
+      key: ValueKey('ListView.builder'),
+      padding: EdgeInsets.all(8.0),
       physics: BouncingScrollPhysics(),
       itemCount: snapshot.data.length,
       itemBuilder: (BuildContext context, int index) {
         return ListTile(
-          title: Padding(
-            padding: const EdgeInsets.only(bottom: 5.0,top: 16.0),
-            child: Text(
+          key: ValueKey('ListTile'),
+          contentPadding: EdgeInsets.all(8.0),
+          title: Text(
               snapshot.data[index].judul,
+              key: ValueKey('Text'),
               style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
             ),
-          ),
           subtitle: Text(
-            snapshot.data[index].pesan,
-            style: TextStyle(fontSize: 12.0, color: Colors.black),
-          ),
+              snapshot.data[index].pesan,
+              key: ValueKey('Text'),
+              style: TextStyle(fontSize: 12.0, color: Colors.black),
+            ),
         );
       },
     );

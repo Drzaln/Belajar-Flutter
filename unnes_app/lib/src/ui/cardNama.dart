@@ -8,18 +8,22 @@ class CardNama extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Card(
+    return Card(
+      key: ValueKey('Card'),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadiusDirectional.all(
           Radius.circular(roundPojok),
         ),
       ),
       child: Column(
+        key: ValueKey('Column'),
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          new Row(
+          Row(
+            key: ValueKey('Row'),
             children: <Widget>[
               Padding(
+                key: ValueKey('Padding'),
                 padding: const EdgeInsets.all(16.0),
                 child: Icon(
                   Icons.person,
@@ -28,18 +32,23 @@ class CardNama extends StatelessWidget {
               ),
               Expanded(
                 /* biar bisa multiline nama */
+                key: ValueKey('Expanded'),
                 child: Padding(
+                  key: ValueKey('Padding'),
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
+                    key: ValueKey('Column'),
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
                         'Selamat datang,',
+                        key: ValueKey('Text'),
                         style: TextStyle(fontSize: 12, color: Colors.grey),
                         textAlign: TextAlign.left,
                       ),
                       Text(
                         namaUser,
+                        key: ValueKey('Text'),
                         style: TextStyle(color: Colors.black, fontSize: 15),
                         maxLines: 20,
                         softWrap: true,
